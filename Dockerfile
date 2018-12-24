@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:7
 
 RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get -y install sqlite3
