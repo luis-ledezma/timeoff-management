@@ -1,6 +1,5 @@
 FROM node:9
 
-RUN apt-get update -y && apt-get upgrade -y
 RUN apt-get -y install sqlite3
 
 RUN adduser --system app --home /app
