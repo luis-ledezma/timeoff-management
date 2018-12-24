@@ -1,4 +1,4 @@
-FROM node:9-alpine
+FROM node:9
 
 RUN apt-get update -y
 RUN apt-get -y install sqlite3
