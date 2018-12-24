@@ -1,13 +1,13 @@
-FROM ubuntu:latest
+FROM node:8
 
 RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y git npm nodejs nodejs-legacy
+RUN apt-get -y install sqlite3
 
 RUN adduser --system app --home /app
 USER app
 
 WORKDIR /app
-RUN git clone https://github.com/timeoff-management/application.git timeoff-management
+RUN git clone https://github.com/luis-ledezma/timeoff-management.git timeoff-management
 
 WORKDIR /app/timeoff-management
 RUN npm install
